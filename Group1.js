@@ -53,46 +53,49 @@ lez primitive5 = null;
 // *********************************************************************
 
 /*.......isFinite().........*/
+
 // A number that is not infinite. In other words it could be measured, or given a value.
 
 // There are a finite number of people at this class.
+
 //! its return result with True or False
 
 let student = 100;
-console.log(isFinite(student) ? "Is Finite" : "Is Infinite");
+console.log(isFinite(student) ? "Is Finite" : "Is Infinite");//Is Finite
 let group = 5;
 let groupName = "Group one";
-console.log(isFinite(groupName) ? "Is Finite" : "Is Infinite");
+console.log(isFinite(groupName) ? "Is Finite" : "Is Infinite");//Is Infinite
 
 let studentInGroup = isFinite(student / group);
-let studentInGroup1 = isFinite(student / groupName);
-
 console.log(
-  "studentInGroup is finite==>",
-  studentInGroup ? "Finite" : "Infinite"
-);
+    "studentInGroup is finite==>",
+    studentInGroup ? "Finite" : "Infinite"
+  );//studentInGroup is finite==> Finite
+
+let studentInGroup1 = isFinite(student / groupName);
 console.log(
   "studentInGroup1 is finite==>",
   studentInGroup1 ? "Finite" : "Infinite"
-);
+);//studentInGroup1 is finite==> Infinite
 
-console.log(isFinite(Infinity) ? "Finite" : "Infinite");
+console.log(isFinite(Infinity) ? "Finite" : "Infinite");//Infinite
 
-console.log(isFinite(NaN) ? "Finite" : "Infinite");
+console.log(isFinite(NaN) ? "Finite" : "Infinite");//Infinite
 
-console.log(isFinite(-Infinity) ? "Finite" : "Infinite");
+console.log(isFinite(-Infinity) ? "Finite" : "Infinite");//Infinite
 
-console.log(isFinite(0) ? "Finite" : "Infinite");
+console.log(isFinite(0) ? "Finite" : "Infinite");//Finite
 
-console.log(isFinite(2e64) ? "Finite" : "Infinite");
+console.log(isFinite(2e64) ? "Finite" : "Infinite");//Finite
 
-console.log(isFinite(999) ? "Finite" : "Infinite");
+console.log(isFinite(999) ? "Finite" : "Infinite");//Finite
 
-console.log(isFinite(null) ? "Finite" : "Infinite");
+console.log(isFinite(null) ? "Finite" : "Infinite");//Finite
 
-console.log(isFinite("0") ? "Finite" : "Infinite");
+console.log(isFinite("0") ? "Finite" : "Infinite");//Finite
 
-console.log(isFinite('0') ? "Finite" : "Infinite");
+console.log(isFinite('0') ? "Finite" : "Infinite");//Finite
+
 
 
 
@@ -102,15 +105,17 @@ function div(p) {
     }
     return 'Number is Infinite!';
   }
-  console.log(div("Hundread"));
-  console.log(div("One"));
+  console.log(div("Hundread"));// Number is Infinite!
+  console.log(div("100"));//Number is Finite.
 
 
 //! An idea that never ends... something is like numbers but not a number. is infinite.......
 
+
 // ***************************************************************
-// The toFixed() is a method of the Number object
-// ===> Convert a number into a string, rounding the number to keep as many decimals as you like
+
+// The toFixed() method formats a number using fixed-point notation ==> toFixed() is a method of the Number object
+// ===> Convert a number into a string, rounding the number to keep only as many decimals as you like 
 //! exampleOne
 let number = 9.3546737372 ;
 let fixedNumber = number.toFixed(2) ;
@@ -158,7 +163,7 @@ messageTwo = 'Goodnight ' ;
 console.log('messageTwo ==>', messageTwo + nameTwo) ; // Goodnight Emma!
 
 //! let lastName = 'Smedlund' ; 
-// lastName ===> (variable name)
+// lastName ===> (variable)
 // = ===> (assigning a value)
 // 'Smedlund' ===> (declaring the value) 
 
@@ -169,25 +174,31 @@ console.log('messageTwo ==>', messageTwo + nameTwo) ; // Goodnight Emma!
 
 // ****************************************************************************
 
-//! parseInt(): Converts a given value to an integer number, if not possible to cnvert then returns NaN  value.
-// The string value to convert to an integer number.
-console.log(parseInt("35")); // 35
-// If the given value is of integer type, then it returns number as it is.
-console.log(parseInt(24)); // 24
-console.log(parseInt(12 + 12)); // 24
-console.log(parseInt("123ABC4")); // 123
-//The console log returned 123 since the parseInt() method will parse the string value '123ABC4' until a non-numeric character is encountered and then it will discard the remainder of the string, returning the integer value.
-console.log(parseInt("ABC123")); // NaN
-//The console log returned NaN since the string value 'ABC123' does not start with a numeric value.
-// If the given value is of float type, then it discards the float part and returns integer part of the number
-console.log(parseInt(3.142)); // 3
-console.log(parseInt(1.6 + 1.6)); // ==> 3.2 ==> 3
-// More example
-console.log(parseInt("2" + "4")); // ==> "24" ==> 24
-console.log(parseInt("2" + "4a")); // ==> "24a" ==> 24
-console.log(parseInt("2a" + "4a")); // ==> "2a4a" ==> 2
-console.log(parseInt(true)); // NaN
+//In JavaScript, parseInt() is a Number method that is used to parse a string and return its value as an integer number.
+//! string_value
+//The string value to convert to an integer number.
+console.log(Number.parseInt("35.6")); // 35
+console.log(Number.parseInt("123ABC4")); // 123
+console.log(Number.parseInt("ABC123")); // NaN
+//In this example, the first output to the console log returned 35 which is the integer representation of the string value '35.6'.
+//The second output to the console log returned 123 since the parseInt() method will parse the string value '123ABC4' until a non-numeric character is encountered and then it will discard the remainder of the string, returning the integer value.
+//The third output to the console log returned NaN since the string value 'ABC123' does not start with a numeric value.
 
 
+// ***************************************************************************+
+
+// parseFloat + parseInt both number methods that basically take a string and try to convert it into a number
+let x = 5;
+let y = "10.999 is a peanut";
+let result1 = x + y
+console.log(result1); // 510.999 is a peanut // string --> because x (number) is coherced to a string and they are concatenaded
+
+// let yInt = Number.parseInt(y);
+// let result2 = x + yInt;
+// console.log(result2); // 10 (Integer)
+
+let yFloat = Number.parseFloat(y);
+let result3 = x + yFloat;
+console.log(result3); // 15.999 (Floating number) 
 
 
