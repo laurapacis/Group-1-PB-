@@ -181,5 +181,20 @@ console.log(Number.parseInt("ABC123")); // NaN
 //The third output to the console log returned NaN since the string value 'ABC123' does not start with a numeric value.
 
 
+// ***************************************************************************+
+
+// parseFloat + parseInt both number methods that basically take a string and try to convert it into a number
+let x = 5;
+let y = "10.999 is a peanut";
+let result1 = x + y
+console.log(result1); // 510.999 is a peanut // string --> because x (number) is coherced to a string and they are concatenaded
+
+// let yInt = Number.parseInt(y);
+// let result2 = x + yInt;
+// console.log(result2); // 10 (Integer)
+
+let yFloat = Number.parseFloat(y);
+let result3 = x + yFloat;
+console.log(result3); // 15.999 (Floating number) 
 
 
