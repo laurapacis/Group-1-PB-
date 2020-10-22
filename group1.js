@@ -30,7 +30,8 @@ Infinity / Infinity; // NaN
 
 //Unlike all other possible values in JavaScript, it is not possible to use the equality operators (== and ===) to compare a value against NaN to determine whether the value is NaN or not, because both NaN == NaN and NaN === NaN evaluate to false. Hence, the necessity of an isNaN function.
 isNaN(NaN); // true
-isNaN("value"); //false
+isNaN("value"); //true
+isNaN(13); //false
 
 isNaN(true); // false
 isNaN(null); // false
@@ -38,7 +39,7 @@ isNaN(null); // false
 
 //! - Primitive Data Types
 //String : sequence of characters "Hello"
-let primitive1 = "Helo";
+let primitive1 = "Hello";
 //Boolean : true or false
 let primitive2 = true;
 // Number: numerical values like 5, 20, 500...
@@ -46,9 +47,9 @@ let primitive3 = 5;
 // Undefined
 let primitive4 = undefined;
 // Null
-lez primitive5 = null;
+let primitive5 = null;
 
-// Strings are immutable ! which means that they cannot change
+// Primitive Data Types are immutable ! which means that they cannot change
 
 // *********************************************************************
 
@@ -112,8 +113,6 @@ function div(p) {
 //! An idea that never ends... something is like numbers but not a number. is infinite.......
 
 
-//! An idea that never ends... something is like numbers but not a number. is infinite.......
-
 // ***************************************************************
 // The toFixed() is a method of the Number object
 // ===> Convert a number into a string, rounding the number to keep as many decimals as you like
@@ -131,6 +130,7 @@ console.log('fixedNum ==>', fixedNum); // '54.3'
 let intNum = 54 ; 
 let fixedIntNum = intNum.toFixed(2) ; 
 console.log('fixedNum1 ==>', fixedIntNum); // '54.00' 
+console.log(fixedIntNum+5)
 
 //! typeof without toFixed() and typeof with toFixed()
 console.log('typeof number ==>', typeof number); // number
@@ -139,7 +139,7 @@ console.log('typeof fixedNumber ==>', typeof fixedNumber); // string
 // *************************************************
 
 // A variable is a named reference to a value ==> a storage location pair together with an associated symbolic name, which contains information referred to as value. ===>  means anything that can vary and it can be changed anytime.
-// in JavaScript we use variables like we use containers ==> for storage,  specifically conatainers for storing data values.
+// in JavaScript we use variables like we use containers ==> for storage,  specifically containers for storing data values.
 let x = 5 ; 
 let y = 5 ;
 let sum = x + y ; 
@@ -175,7 +175,7 @@ console.log('messageTwo ==>', messageTwo + nameTwo) ; // Goodnight Emma!
 
 // ****************************************************************************
 
-//! parseInt(): Converts a given value to an integer number, if not possible to cnvert then returns NaN  value.
+//! parseInt(): Converts a given value to an integer number, if not possible to convert then returns NaN  value.
 // The string value to convert to an integer number.
 console.log(parseInt("35")); // 35
 // If the given value is of integer type, then it returns number as it is.
@@ -204,7 +204,8 @@ console.log(result1); // 510.999 is a peanut // string --> because x (number) is
 // let yInt = Number.parseInt(y);
 // let result2 = x + yInt;
 // console.log(result2); // 10 (Integer)
-​
+​// Integer numbers don't have decimal values (15)
+// Float numbers have decimal value (15.33, 115.800000, etc...)
 let yFloat = Number.parseFloat(y);
 let result3 = x + yFloat;
 console.log(result3); // 15.999 (Floating number)
