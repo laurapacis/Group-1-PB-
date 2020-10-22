@@ -109,9 +109,8 @@ function div(p) {
 //! An idea that never ends... something is like numbers but not a number. is infinite.......
 
 // ***************************************************************
-
-// The toFixed() method formats a number using fixed-point notation ==> toFixed() is a method of the Number object
-// ===> Convert a number into a string, rounding the number to keep only as many decimals as you like 
+// The toFixed() is a method of the Number object
+// ===> Convert a number into a string, rounding the number to keep as many decimals as you like
 //! exampleOne
 let number = 9.3546737372 ;
 let fixedNumber = number.toFixed(2) ;
@@ -159,7 +158,7 @@ messageTwo = 'Goodnight ' ;
 console.log('messageTwo ==>', messageTwo + nameTwo) ; // Goodnight Emma!
 
 //! let lastName = 'Smedlund' ; 
-// lastName ===> (variable)
+// lastName ===> (variable name)
 // = ===> (assigning a value)
 // 'Smedlund' ===> (declaring the value) 
 
@@ -190,20 +189,5 @@ console.log(parseInt("2a" + "4a")); // ==> "2a4a" ==> 2
 console.log(parseInt(true)); // NaN
 
 
-// ***************************************************************************+
-
-// parseFloat + parseInt both number methods that basically take a string and try to convert it into a number
-let x = 5;
-let y = "10.999 is a peanut";
-let result1 = x + y
-console.log(result1); // 510.999 is a peanut // string --> because x (number) is coherced to a string and they are concatenaded
-
-// let yInt = Number.parseInt(y);
-// let result2 = x + yInt;
-// console.log(result2); // 10 (Integer)
-
-let yFloat = Number.parseFloat(y);
-let result3 = x + yFloat;
-console.log(result3); // 15.999 (Floating number) 
 
 
