@@ -170,15 +170,24 @@ console.log('messageTwo ==>', messageTwo + nameTwo) ; // Goodnight Emma!
 
 // ****************************************************************************
 
-//In JavaScript, parseInt() is a Number method that is used to parse a string and return its value as an integer number.
-//! string_value
-//The string value to convert to an integer number.
-console.log(Number.parseInt("35.6")); // 35
-console.log(Number.parseInt("123ABC4")); // 123
-console.log(Number.parseInt("ABC123")); // NaN
-//In this example, the first output to the console log returned 35 which is the integer representation of the string value '35.6'.
-//The second output to the console log returned 123 since the parseInt() method will parse the string value '123ABC4' until a non-numeric character is encountered and then it will discard the remainder of the string, returning the integer value.
-//The third output to the console log returned NaN since the string value 'ABC123' does not start with a numeric value.
+//! parseInt(): Converts a given value to an integer number, if not possible to cnvert then returns NaN  value.
+// The string value to convert to an integer number.
+console.log(parseInt("35")); // 35
+// If the given value is of integer type, then it returns number as it is.
+console.log(parseInt(24)); // 24
+console.log(parseInt(12 + 12)); // 24
+console.log(parseInt("123ABC4")); // 123
+//The console log returned 123 since the parseInt() method will parse the string value '123ABC4' until a non-numeric character is encountered and then it will discard the remainder of the string, returning the integer value.
+console.log(parseInt("ABC123")); // NaN
+//The console log returned NaN since the string value 'ABC123' does not start with a numeric value.
+// If the given value is of float type, then it discards the float part and returns integer part of the number
+console.log(parseInt(3.142)); // 3
+console.log(parseInt(1.6 + 1.6)); // ==> 3.2 ==> 3
+// More example
+console.log(parseInt("2" + "4")); // ==> "24" ==> 24
+console.log(parseInt("2" + "4a")); // ==> "24a" ==> 24
+console.log(parseInt("2a" + "4a")); // ==> "2a4a" ==> 2
+console.log(parseInt(true)); // NaN
 
 
 // ***************************************************************************+
