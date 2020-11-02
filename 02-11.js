@@ -6,6 +6,21 @@
 6- includes()
 7- reverse()*/
 
+/*********************************************************************************************************************  *****************************************If...Else***********************************************************
+*********************************************************************************************************************/
+//If - else statement is used to command multiple actions at once
+// If; to indicate the starting action and outcome, could printed as true boolean
+//else; to indicate what happens when the outcome is different than
+//the main outcome, false action
+let ane1 = 8;
+let ane2 = 13
+let ane3 = 5;
+if (ane1 < ane2) {
+console.log("true");
+   } else {console.log ("false");
+}// true
+
+
 /*********************************************************************************************************************  *****************************************Array.pop***********************************************************
 *********************************************************************************************************************/
 // The pop() method removes the last element from an array and returns that element. This method changes the length of the array. 
@@ -26,6 +41,21 @@ console.log(popped); // Green
 //example empty array
 const saraEmptyArr = [] ; 
 console.log(saraEmptyArr.pop()); // undefined 
+
+
+/*********************************************************************************************************************  *****************************************Array.push***********************************************************
+*********************************************************************************************************************/
+// Push statement is used to fill in an empty variable box
+let ane4 = "This ";
+let ane5 = [];
+let ane6 = "nice.";
+ane5.push("is ");
+//ane5.push("was ");
+//ane5.push("should be ");
+//the output variable will change according to what you push to it
+console.log(ane4 + ane5 + ane6); // This is nice
+
+
 
 
 /*********************************************************************************************************************  *****************************************Array.includes***********************************************************
