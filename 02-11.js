@@ -8,6 +8,24 @@
 
 /*********************************************************************************************************************  *****************************************Array.includes***********************************************************
 *********************************************************************************************************************/
+// The pop() method removes the last element from an array and returns that element. This method changes the length of the array. 
+const saraFavCities = ['Stockholm', 'London', 'New York', 'Paris' ] ;
+console.log(saraFavCities.pop()); // ==> returns Paris
+console.log(saraFavCities); // [ 'Stockholm', 'London', 'New York' ]
+
+saraFavCities.pop() ;
+console.log(saraFavCities); // [ 'Stockholm', 'London' ]
+
+//example empty array
+const saraEmptyArr = [] ; 
+console.log(saraEmptyArr.pop()); // undefined 
+
+//example 2
+let saraFavColor = ['Yellow', 'Black', 'Pink', 'Green'] ;
+let popped = saraFavColor.pop();
+
+console.log(saraFavColor); // [ 'Yellow', 'Black', 'Pink' ]
+console.log(popped); // Green
 
 // The includes() method determines whether an array includes a certain value among its entries, returning true or false as appropriate.
 const arrayInes = [1,2,3];
