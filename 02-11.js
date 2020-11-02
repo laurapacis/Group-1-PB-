@@ -6,7 +6,7 @@
 6- includes()
 7- reverse()*/
 
-/*********************************************************************************************************************  *****************************************Array.includes***********************************************************
+/*********************************************************************************************************************  *****************************************Array.pop***********************************************************
 *********************************************************************************************************************/
 // The pop() method removes the last element from an array and returns that element. This method changes the length of the array. 
 const saraFavCities = ['Stockholm', 'London', 'New York', 'Paris' ] ;
@@ -27,6 +27,9 @@ let popped = saraFavColor.pop();
 console.log(saraFavColor); // [ 'Yellow', 'Black', 'Pink' ]
 console.log(popped); // Green
 
+
+/*********************************************************************************************************************  *****************************************Array.includes***********************************************************
+*********************************************************************************************************************/
 // The includes() method determines whether an array includes a certain value among its entries, returning true or false as appropriate.
 const arrayInes = [1,2,3];
 console.log("includes(2)==>",arrayInes.includes(2)); // true
