@@ -56,6 +56,43 @@ ane5.push("is ");
 console.log(ane4 + ane5 + ane6); // This is nice
 
 
+/**********************************************************************************************************************
+// ! **************   unshift / shift **************
+
+// Another two arrays methods that have to do with adding or removing elements from the array.
+// The name comes originally from another programming languages that predate JavaScript.  Became standard among them. (To know more search for "stacks" and "cues".)
+
+// ! unshift()
+// works very similar to push()
+// adds element to the beginning of the array i.e. adds elemtent to the left.
+
+const pizza = ['dough'];
+console.log(pizza); // ['dough']
+
+pizza.unshift('tomato');
+console.log(pizza); // [ 'tomato', 'dough' ]
+
+pizza.unshift('cheese');
+console.log(pizza); // [ 'cheese', 'tomato', 'dough' ]
+
+pizza.unshift('basil');
+console.log(pizza); // [ 'basil', 'cheese', 'tomato', 'dough' ]
+
+//! shift()
+// works very similar to pop()
+// removes elements FROM the beginning fo the array i.e. removes first element from the left.
+
+console.log(pizza.shift()); // [ 'basil' ]
+console.log(pizza); // [ 'cheese', 'tomato', 'dough' ]
+
+pizza.shift()
+console.log(pizza) // [ 'cheese', 'tomato', 'dough' ]
+
+pizza.shift()
+console.log(pizza); // [ 'tomato', 'dough' ]
+
+pizza.shift(); 
+console.log(pizza); // []
 
 
 /*********************************************************************************************************************  *****************************************Array.includes***********************************************************
@@ -78,59 +115,3 @@ console.log("includes('cat',4)==>", petsInes.includes("cat", 4)); // false
 //If the computed index is less or equal than -1 * arr.length, the entire array will be searched.
 console.log("includes('cat',-2)==>", petsInes.includes("cat", -2)); // false
 console.log("includes('cat',-4)==>", petsInes.includes("cat", -4)); // true
-
-//! JavaScript Array reverse() Method
-
-// The arr.reverse() method is used for in-place reversal of the array. The first element of the array becomes the last element and vice versa.
-
-//! Syntax: arr.reverse()
-
-// Parameters: This method does not accept any parameter
-
-// Return value: This method returns the reference of the reversed original array.
-
-
-// In this example the reverse() method reverses the sequence of the array elements of arr.
-
-let arr = [34, 234, 567, 4];
-console.log("arr ==>", arr);
-
-let reverseArr = arr.reverse();
-console.log("reverseArr ==>", reverseArr); // ==> [ 4, 567, 234, 34 ]
-
-// Example from live coding 
-
-const arrToReverse = [77, 6, 9, "a", "b", 1, true, "test"];
-console.log("arrToReverse ==>", arrToReverse); // arrToReverse ==> [ 77, 6, 9, 'a', 'b', 1, true, 'test' ]
-arrToReverse.reverse()
-console.log("arrToReverse ==>", arrToReverse); //  ==> [ 'test', true, 1, 'b', 'a', 9, 6, 77 ]
-
-
-const arrToReverse2 = [77, 6, 9, "a", ["Alex", "Max", "Tomy"], "b", 1, true, "test"];
-
-arrToReverse2[4].reverse()
-console.log("arrToReverse2 ==>", arrToReverse2); // arrToReverse2 ==> [ 77, 6, 9, 'a', [ 'Tomy', 'Max', 'Alex' ], 'b', 1, true, 'test' ]
-
-
-//! Reverse a String With Built-In Functions — with split(), reverse() and join()
-
-function reverseString(str) {
-    // Step 1. Use the split() method to return a new array
-    let splitString = str.split(""); // let splitString = "hello".split("");
-    // ["h", "e", "l", "l", "o"]
-
-    // Step 2. Use the reverse() method to reverse the new created array
-    let reverseArray = splitString.reverse(); // let reverseArray = ["h", "e", "l", "l", "o"].reverse();
-    // ["o", "l", "l", "e", "h"]
-
-    // Step 3. Use the join() method to join all elements of the array into a string
-    let joinArray = reverseArray.join(""); // let joinArray = ["o", "l", "l", "e", "h"].join("");
-    // "olleh"
-
-    //Step 4. Return the reversed string
-    return joinArray; // "olleh"
-}
-
-reverseString("hello");
-
-
