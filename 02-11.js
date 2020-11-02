@@ -16,16 +16,16 @@ console.log(saraFavCities); // [ 'Stockholm', 'London', 'New York' ]
 saraFavCities.pop() ;
 console.log(saraFavCities); // [ 'Stockholm', 'London' ]
 
-//example empty array
-const saraEmptyArr = [] ; 
-console.log(saraEmptyArr.pop()); // undefined 
-
 //example 2
 let saraFavColor = ['Yellow', 'Black', 'Pink', 'Green'] ;
 let popped = saraFavColor.pop();
 
 console.log(saraFavColor); // [ 'Yellow', 'Black', 'Pink' ]
 console.log(popped); // Green
+
+//example empty array
+const saraEmptyArr = [] ; 
+console.log(saraEmptyArr.pop()); // undefined 
 
 
 /*********************************************************************************************************************  *****************************************Array.includes***********************************************************
